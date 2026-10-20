@@ -1587,7 +1587,7 @@ extension JNI {
             }
         }
         let JAVA_HOME = getenv("JAVA_HOME")!
-        let javaHome = URL(fileURLWithPath: String(validatingUTF8: JAVA_HOME)!)
+        let javaHome = URL(fileURLWithPath: String(validatingCString: JAVA_HOME)!)
 
         let ext: String
         #if os(Windows)
